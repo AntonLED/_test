@@ -53,6 +53,7 @@ exclude_patterns = []
 
 # Breathe Configuration
 breathe_projects = {
+    
     "Dephan ROS driver": "../build/doxygen/xml",
 }
 breathe_default_project = "Dephan ROS driver"
