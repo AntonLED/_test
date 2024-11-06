@@ -61,7 +61,7 @@ breathe_default_project = "Dephan ROS driver"
 # -- Options for HTML output -------------------------------------------------
 html_context = {
     
-  'current_version': 'ROS:noetic',
+  'current_version': os.environ["CURRENT_VERSION"],
   'versions' : [["ROS:noetic", "https://antonled.github.io/_test/noetic"], ["ROS:iron", "https://antonled.github.io/_test/iron"]],
 }
 

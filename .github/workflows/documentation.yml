@@ -20,12 +20,14 @@ jobs:
         working-directory: ./src/docs
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
+          export CURRENT_VERSION=ROS:noetic 
           make html 
 
       - name: Build test
         working-directory: ./src/docs
         if: ${{ github.ref == 'refs/heads/test' }}
         run: |
+          export CURRENT_VERSION=ROS:iron
           git fetch origin main:main
           git checkout main -- source/conf.py
           make html 
