@@ -39,6 +39,7 @@ jobs:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build/html
+          destination_dir: docs
 
       - name: Deploy ROS:noetic version to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
