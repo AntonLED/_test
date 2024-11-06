@@ -1,4 +1,5 @@
 import subprocess
+import os
 # Doxygen
 subprocess.call('cd ../ && doxygen', shell=True)
 
@@ -59,7 +60,7 @@ breathe_default_project = "Dephan ROS driver"
 
 # -- Options for HTML output -------------------------------------------------
 html_context = {
-  'current_version': 'ROS:iron',
+  'current_version': os.environ["CURRENT_VERSION"],
   'versions' : [["ROS:noetic", "/_test/noetic"], ["ROS:iron", "/_test/iron"]],
 }
 
