@@ -15,7 +15,7 @@
 
 namespace dephan_ros {
 /**
- * Class for handle raw packet derived from base packet class.
+ * Class for handle raw packet derived from base packet class sdlfvnksdjnfvkjdnfkvnbdfkjgnbkjdfngbkjfg
  */
 class pkt_hdl_Mech : public packet {
 
