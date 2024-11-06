@@ -60,7 +60,7 @@ breathe_default_project = "Dephan ROS driver"
 # -- Options for HTML output -------------------------------------------------
 html_context = {
   'current_version': 'ROS:iron',
-  'versions' : [["ROS:noetic", "noetic"], ["ROS:iron", "iron"]],
+  'versions' : [["ROS:noetic", "./noetic"], ["ROS:iron", "./iron"]],
 }
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
