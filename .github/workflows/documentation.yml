@@ -15,18 +15,37 @@ jobs:
         run: |
           pip install sphinx breathe sphinx_copybutton sphinx_tabs sphinx_rtd_theme sphinx_favicon
           sudo apt install doxygen
-      - name: Checkout
-        run: |
-          git checkout 
-      - name: Sphinx build
+
+      - name: Build main
         working-directory: ./src/docs
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: |
-          make html
-      - name: Deploy to GitHub Pages
+          make html 
+
+      - name: Build test
+        working-directory: ./src/docs
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          git checkout test
+          make html 
+
+      - name: Deploy ROS:noetic version to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build/html
+          destination_dir: noetic
           force_orphan: true
+
+      - name: Deploy ROS:iron version to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/test'}}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src/docs/build/html
+          destination_dir: iron
+          force_orphan: true
+
