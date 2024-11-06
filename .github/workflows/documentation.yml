@@ -15,6 +15,9 @@ jobs:
         run: |
           pip install sphinx breathe sphinx_copybutton sphinx_tabs sphinx_rtd_theme sphinx_favicon
           sudo apt install doxygen
+      - name: Checkout
+        run: |
+          git checkout 
       - name: Sphinx build
         working-directory: ./src/docs
         run: |
