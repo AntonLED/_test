@@ -20,7 +20,7 @@ jobs:
         working-directory: ./src/docs
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
-          export CURRENT_VERSION=ROS:noetic 
+          export CURRENT_VERSION=docs
           make html 
 
       - name: Build test
