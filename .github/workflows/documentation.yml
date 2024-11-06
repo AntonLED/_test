@@ -20,12 +20,21 @@ jobs:
         working-directory: ./src/docs
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
-          export CURRENT_VERSION=ROS:noetic 
+          export CURRENT_VERSION=docs
           make html 
 
-      - name: Build test
+      - name: Build ros1
         working-directory: ./src/docs
-        if: ${{ github.ref == 'refs/heads/test' }}
+        if: ${{ github.ref == 'refs/heads/ros1' }}
+        run: |
+          export CURRENT_VERSION=ROS:noetic
+          git fetch origin main:main
+          git checkout main -- source/conf.py
+          make html 
+
+      - name: Build ros2
+        working-directory: ./src/docs
+        if: ${{ github.ref == 'refs/heads/ros2' }}
         run: |
           export CURRENT_VERSION=ROS:iron
           git fetch origin main:main
@@ -44,7 +53,7 @@ jobs:
 
       - name: Deploy ROS:noetic version to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/ros1'}}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -54,7 +63,7 @@ jobs:
 
       - name: Deploy ROS:iron version to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/test'}}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/ros2'}}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
