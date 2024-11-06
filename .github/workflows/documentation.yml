@@ -40,6 +40,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build/html
           destination_dir: docs
+          enable_jekyll: false
 
       - name: Deploy ROS:noetic version to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -49,6 +50,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build/html
           destination_dir: noetic
+          enable_jekyll: false
 
       - name: Deploy ROS:iron version to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -58,4 +60,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build/html
           destination_dir: iron
+          enable_jekyll: false
 
