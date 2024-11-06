@@ -27,7 +27,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/test' }}
         run: |
           git fetch origin main:main
-          git checkout main -- conf.py
+          git checkout main -- ./src/docs/source/conf.py
           make html 
 
       - name: Deploy ROS:noetic version to GitHub Pages
