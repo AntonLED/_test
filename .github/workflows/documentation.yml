@@ -26,8 +26,8 @@ jobs:
         working-directory: ./src/docs
         if: ${{ github.ref == 'refs/heads/test' }}
         run: |
-          git fetch --tags
-          git checkout main -- conf.py
+          git fetch origin main:main
+          git checkout main -- source/conf.py
           make html 
 
       - name: Deploy ROS:noetic version to GitHub Pages
@@ -38,7 +38,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build/html
           destination_dir: noetic
-          force_orphan: true
 
       - name: Deploy ROS:iron version to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -48,5 +47,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build/html
           destination_dir: iron
-          force_orphan: true
 
