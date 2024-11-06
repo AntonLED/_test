@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdephan__ros_1_1Driver" kind="class" language="C++" prot="public">
+    <compoundname>dephan_ros::Driver</compoundname>
+    <includes refid="ros__driver_8hpp" local="no">ros_driver.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1a27fb94c2dd8eacfb4542137e5fde3dbb" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string dephan_ros::Driver::ip_addr</definition>
+        <argsstring></argsstring>
+        <name>ip_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IP address of the LiDar device. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="37" column="17" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1ad244ce8832f99f8cc75768b50356b755" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned dephan_ros::Driver::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Port of the LiDar device. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="42" column="14" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1ac2a50e8d7caf661cadd9baae239af1b6" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classdephan__ros_1_1receiver__socket" kindref="compound">receiver_socket</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;receiver_socket&gt; dephan_ros::Driver::socket</definition>
+        <argsstring></argsstring>
+        <name>socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Socket pointer for recieving data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="47" column="21" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1a16b560815004ee5a3c2e0f6142da1e31" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string dephan_ros::Driver::pcap_path</definition>
+        <argsstring></argsstring>
+        <name>pcap_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Path to pcap file that will be readed by driver. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="52" column="17" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1a6fbcbc450e2a8160142467a76eb71ccf" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Tins::FileSniffer &gt;</type>
+        <definition>std::unique_ptr&lt;Tins::FileSniffer&gt; dephan_ros::Driver::pcap_sniffer</definition>
+        <argsstring></argsstring>
+        <name>pcap_sniffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer in libtins&apos; shiffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="57" column="21" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1a483cb781522e93b80197d794f04c8b18" prot="private" static="no" mutable="no">
+        <type>long long</type>
+        <definition>long long dephan_ros::Driver::_prev_pkt_tmstmp</definition>
+        <argsstring></argsstring>
+        <name>_prev_pkt_tmstmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stored packet&apos;s timestamp for time correct reading from the pcap file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="62" column="15" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1ae39e0c4996a2d2154f476a9b98571883" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher dephan_ros::Driver::rawdata_publihser</definition>
+        <argsstring></argsstring>
+        <name>rawdata_publihser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ros topic publisher for the rawdata. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="67" column="20" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1aedbd3a54b9de392a2a96ef272d8ff713" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher dephan_ros::Driver::pointcloud_publisher</definition>
+        <argsstring></argsstring>
+        <name>pointcloud_publisher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ros topic publisher for the ros pointcloud v1 data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="72" column="20" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdephan__ros_1_1Driver_1aef3d8b4a87c1f0dda85572664ec24bf1" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher dephan_ros::Driver::pointcloud2_publisher</definition>
+        <argsstring></argsstring>
+        <name>pointcloud2_publisher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ros topic publisher for the ros pointcloud v2 data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="77" column="20" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1ab7a6ebeae633bb22c80ca10465eead71" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dephan_ros::Driver::_poll_udp</definition>
+        <argsstring>()</argsstring>
+        <name>_poll_udp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Poll one packet (2 pi / 18 rad segment per packet) in UDP mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="82" column="10" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="175" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1a6b2251b92ee3664600ba6756315d5a3d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dephan_ros::Driver::_poll_pcap</definition>
+        <argsstring>()</argsstring>
+        <name>_poll_pcap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Poll one packet (2 pi / 18 rad segment per packet) in PCAP mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="87" column="10" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="210" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1ad4f2d43594008ad9880f80a6222ceee6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dephan_ros::Driver::_poll_full_udp</definition>
+        <argsstring>()</argsstring>
+        <name>_poll_full_udp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Poll 18 packets (2 pi rad segment per packet) in UPD mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="92" column="10" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="70" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1a754788757f3c0d88b24839bef6c5ffe6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dephan_ros::Driver::_poll_full_pcap</definition>
+        <argsstring>()</argsstring>
+        <name>_poll_full_pcap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pill 18 packets (2 pi rad segment per packet) in PCAP mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="97" column="10" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="109" bodyend="169"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1a353f3280e31977b8be7dad15313807ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dephan_ros::Driver::Driver</definition>
+        <argsstring>(ros::NodeHandle nh, std::string ip_addr, unsigned port, std::string topic_name)</argsstring>
+        <name>Driver</name>
+        <param>
+          <type>ros::NodeHandle</type>
+          <declname>nh</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>ip_addr</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classdephan__ros_1_1Driver" kindref="compound">Driver</ref> UDP mode constructor.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ros handle node. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ip_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ip address of the LiDar device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Network port of the LiDar device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">topic_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the topic for pointcloud v2 messages generated by the <ref refid="classdephan__ros_1_1Driver" kindref="compound">Driver</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="109" column="5" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="16" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1ae5bdf691b9f7bb8684509f656aef9474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dephan_ros::Driver::Driver</definition>
+        <argsstring>(ros::NodeHandle nh, std::string pcap_path, std::string topic_name)</argsstring>
+        <name>Driver</name>
+        <param>
+          <type>ros::NodeHandle</type>
+          <declname>nh</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>pcap_path</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>topic_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classdephan__ros_1_1Driver" kindref="compound">Driver</ref> PCAP mode construcror.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ros handle node. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcap_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the target PCAP file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">topic_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the topic for pointcloud v2 messages generated by the <ref refid="classdephan__ros_1_1Driver" kindref="compound">Driver</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="122" column="5" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="32" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1aad0258b16b35e5ab8391a26f7c6f2b65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dephan_ros::Driver::poll</definition>
+        <argsstring>()</argsstring>
+        <name>poll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Polling function for the one packet from the LiDar. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="127" column="10" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="48" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1af1875e61040f8cc114d8523d74642988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dephan_ros::Driver::poll_full</definition>
+        <argsstring>()</argsstring>
+        <name>poll_full</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Polling function for the 18 packets from the LiDar. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="132" column="10" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="59" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classdephan__ros_1_1Driver_1a93e57a1f004ffb7b48547bb5a60aa80b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::string, unsigned &gt;</type>
+        <definition>std::pair&lt; std::string, unsigned &gt; dephan_ros::Driver::get_network_params</definition>
+        <argsstring>()</argsstring>
+        <name>get_network_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for the network parameters of the LiDar device. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="137" column="15" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/src/ros_driver.cpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for driver. </para>
+    </detaileddescription>
+    <location file="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" line="32" column="1" bodyfile="/home/anton/dephan-ros-driver/src/mech_lidar_driver/include/ros_driver.hpp" bodystart="32" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classdephan__ros_1_1Driver_1a754788757f3c0d88b24839bef6c5ffe6" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>_poll_full_pcap</name></member>
+      <member refid="classdephan__ros_1_1Driver_1ad4f2d43594008ad9880f80a6222ceee6" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>_poll_full_udp</name></member>
+      <member refid="classdephan__ros_1_1Driver_1a6b2251b92ee3664600ba6756315d5a3d" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>_poll_pcap</name></member>
+      <member refid="classdephan__ros_1_1Driver_1ab7a6ebeae633bb22c80ca10465eead71" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>_poll_udp</name></member>
+      <member refid="classdephan__ros_1_1Driver_1a483cb781522e93b80197d794f04c8b18" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>_prev_pkt_tmstmp</name></member>
+      <member refid="classdephan__ros_1_1Driver_1a353f3280e31977b8be7dad15313807ab" prot="public" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>Driver</name></member>
+      <member refid="classdephan__ros_1_1Driver_1ae5bdf691b9f7bb8684509f656aef9474" prot="public" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>Driver</name></member>
+      <member refid="classdephan__ros_1_1Driver_1a93e57a1f004ffb7b48547bb5a60aa80b" prot="public" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>get_network_params</name></member>
+      <member refid="classdephan__ros_1_1Driver_1a27fb94c2dd8eacfb4542137e5fde3dbb" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>ip_addr</name></member>
+      <member refid="classdephan__ros_1_1Driver_1a16b560815004ee5a3c2e0f6142da1e31" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>pcap_path</name></member>
+      <member refid="classdephan__ros_1_1Driver_1a6fbcbc450e2a8160142467a76eb71ccf" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>pcap_sniffer</name></member>
+      <member refid="classdephan__ros_1_1Driver_1aef3d8b4a87c1f0dda85572664ec24bf1" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>pointcloud2_publisher</name></member>
+      <member refid="classdephan__ros_1_1Driver_1aedbd3a54b9de392a2a96ef272d8ff713" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>pointcloud_publisher</name></member>
+      <member refid="classdephan__ros_1_1Driver_1aad0258b16b35e5ab8391a26f7c6f2b65" prot="public" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>poll</name></member>
+      <member refid="classdephan__ros_1_1Driver_1af1875e61040f8cc114d8523d74642988" prot="public" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>poll_full</name></member>
+      <member refid="classdephan__ros_1_1Driver_1ad244ce8832f99f8cc75768b50356b755" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>port</name></member>
+      <member refid="classdephan__ros_1_1Driver_1ae39e0c4996a2d2154f476a9b98571883" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>rawdata_publihser</name></member>
+      <member refid="classdephan__ros_1_1Driver_1ac2a50e8d7caf661cadd9baae239af1b6" prot="private" virt="non-virtual"><scope>dephan_ros::Driver</scope><name>socket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
