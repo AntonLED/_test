@@ -53,7 +53,6 @@ exclude_patterns = []
 
 # Breathe Configuration
 breathe_projects = {
-    
     "Dephan ROS driver": "../build/doxygen/xml",
 }
 breathe_default_project = "Dephan ROS driver"
@@ -62,7 +61,7 @@ breathe_default_project = "Dephan ROS driver"
 # -- Options for HTML output -------------------------------------------------
 html_context = {
   'current_version': os.environ["CURRENT_VERSION"],
-  'versions' : [["ROS:noetic", "/_test/noetic"], ["ROS:iron", "/_test/iron"]],
+  'versions' : [["ROS:noetic", "https://antonled.github.io/_test/noetic"], ["ROS:iron", "https://antonled.github.io/_test/iron"]],
 }
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
