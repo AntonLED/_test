@@ -59,7 +59,7 @@ breathe_default_project = "Dephan ROS driver"
 
 # -- Options for HTML output -------------------------------------------------
 html_context = {
-    'current_version': 'ROS:noetic',
+  'current_version': 'ROS:iron',
   'versions' : [["ROS:noetic", "noetic"], ["ROS:iron", "iron"]],
 }
 
