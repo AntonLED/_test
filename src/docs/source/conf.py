@@ -36,6 +36,7 @@ release = '0.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    
     'breathe',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
