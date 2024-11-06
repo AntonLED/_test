@@ -21,7 +21,7 @@ For run and build driver please run the following commands:
 
 .. tabs::
     
-    .. code-tab:: console Ubuntu
+    .. code-tab:: console ROS:noetic
 
         git clone https://github.com/Dephan-LLC/dephan-ros-driver.git
 
@@ -30,6 +30,12 @@ For run and build driver please run the following commands:
         catkin_make 
 
         source devel/setup.bash
+    
+    .. code-tab:: console ROS:iron
+
+        git clone https://github.com/Dephan-LLC/dephan-ros-driver.git
+
+        cd dephan-ros-driver
 
 Now you are ready to run the testing node:
 

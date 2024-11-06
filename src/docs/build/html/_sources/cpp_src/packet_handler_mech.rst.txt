@@ -2,7 +2,7 @@
 Class pkt_hdl_Mech
 ==================
 
-- Defined ad ``mech_lidar_driver/include/packet_handler_mech.hpp``
+- Defined ad ``mech_lidar_driver/include/packet_handler_mech.hp``
 
 Class Documentation
 -------------------
