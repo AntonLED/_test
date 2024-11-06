@@ -26,7 +26,6 @@ jobs:
         working-directory: ./src/docs
         if: ${{ github.ref == 'refs/heads/test' }}
         run: |
-          git checkout test
           git checkout main -- conf.py
           make html 
 
