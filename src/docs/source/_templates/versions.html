@@ -4,14 +4,12 @@
         <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
-        {% if versions %}
         <dl>
             <dt>{{ _('Versions') }}</dt>
             {% for the_version, url in versions %}
             <dd><a href="{{ url }}/index.html">{{ the_version }}</a></dd>
             {% endfor %}
         </dl>
-        {% endif %}
         <br>
         </dl>
     </div>
